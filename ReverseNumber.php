@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Author -> Bhumesh Ranjane
+ * PHP Version -> 8.0.9
+ * Class to perform Reverse of a Number operations
+ */
 class ReverseNumber{
 
     function reverseNum($num){

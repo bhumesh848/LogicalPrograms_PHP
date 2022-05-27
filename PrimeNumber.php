@@ -1,7 +1,9 @@
 <?php
 
 /**
- * Program to check given number is prime or not
+ * Author -> Bhumesh Ranjane
+ * PHP Version -> 8.0.9
+ * Class to perform Prime Number operations
  */
 class PrimeNumber
 {
