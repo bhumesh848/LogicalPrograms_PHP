@@ -10,7 +10,7 @@ class Util
     static function dayOfWeek($date, $month, $year)
     {
 
-        $y0 = $year - ((14 - $month) / 12);
+        $y0 = $year - (14 - $month) / 12;
         $x = $y0 + ($y0 / 4) - ($y0 / 100) + ($y0 / 400);
         $m0 = $month + (12 * ((14 - $month) / 12)) - 2;
         $d0 = ($date + $x + ((31 * $m0) / 12)) % 7;
