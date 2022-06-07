@@ -28,9 +28,18 @@ class PrimeNumber
             }
         }
     }
+    function validation($number){
+		if(is_numeric($number)){
+			PrimeNumber::prime($number);
+		}
+		else{
+			echo "Enter valid input";
+		}
+	}
 }
 //creating object of class
 $primeNum = new PrimeNumber();
 $num = readline("Enter Number : ");
-$primeNum->prime($num);
+//$primeNum->prime($num);
+$primeNum->validation($number)
 ?>

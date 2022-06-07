@@ -26,8 +26,18 @@ class Perfect_Number
 			echo "The Number " . $number . " is not a Perfect Number.";
 		}
 	}
+	function validation($number){
+		if(is_numeric($number)){
+			Perfect_Number::perfectNumber($number);
+		}
+		else{
+			echo "Enter valid input";
+		}
+	}
+	
 }
 $perfectNumber = new Perfect_Number();
 $number = readline('Enter a Number: ');
-$perfectNumber->perfectNumber($number);
+//$perfectNumber->perfectNumber($number);
+$perfectNumber-> validation($number);
 ?>

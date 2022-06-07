@@ -62,9 +62,18 @@ class Binary
             $sum += (pow(2, $i) * self::$binaryArray[$j]);
             $j++;
         }
-        echo "\nThe decimal number after Swapping is::\n" . $sum;
+        echo "\nThe decimal number after Swapping is::\n" . $sum."\n";
+    }
+   public static function powerOf($n,$pow){
+        $temp = 1;
+        for($i=1;$i<=$pow;$i++){
+           $temp *= $n;
+        }
+        return $temp;
     }
 }
+ 
+// validation for user input
 $number = readline('Enter a +Ve integer: ');
 $number1 = (int) $number;
 //echo gettype($number1);
@@ -78,4 +87,6 @@ if (gettype($number1) == 'integer') {
 } else {
     echo "The input is not an integer";
 }
+
+echo   Binary::powerOf(2,3);
 ?>

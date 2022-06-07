@@ -52,5 +52,6 @@ class Util
         $degreeCelsius = ($temperature - 32) * (5 / 9);
         echo $temperature . "°F in Celsius is " . round($degreeCelsius, 2) . "°C\n";
     }
+   
 }
 ?>

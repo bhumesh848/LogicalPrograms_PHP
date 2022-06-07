@@ -25,10 +25,9 @@ class FibonacciSeries
         }
     }
 }
+
 // Taking input from the user
-
 $nthValue = readline("How many numbers of series you want: ");
-
 /**
  * Using if-else statement to check whether the input entered
  * by user is valid or not

@@ -5,40 +5,29 @@
  */
 class StopWatch
 {
-    static $start;
-    static $stop;
+    static function watch($startTime,$endTime){
+        echo "Enter 1 to start Time";
+        echo "Enter 2 to end time";
+        $num = readline("Enter option ");
+        switch($num){
+            case 1:
+                $startTime = time();
+                echo"\n" . $startTime;
+                StopWatch::watch($startTime,$endTime);
+                break;
+            case 2:
+                $endTime = time();
+                echo "\n" . $endTime;
+                $elapssedTime = $endTime - $startTime; 
+                echo "\n" . $elapssedTime;
+                break;
+                default:
+                echo "enter valid number";
 
-    static function start()
-    {
-        // Accessing static variable
-        self::$start = round(microtime(true) * 1000);
-    }
-    static function stop()
-    {
-        self::$stop = round(microtime(true) * 1000);
-    }
-
-    static function elapsed()
-    {
-        return "Time : " . ((self::$stop - self::$start) / 1000) . " seconds\n";
-    }
-
-    static function watch()
-    {
-        echo "StopWatch\n";
-        echo "enter to start ";
-        $i = fgets(STDIN);
-        //get start time
-        self::$start = round(microtime(true) * 1000);
-
-        echo "enter 2 to stop ";
-        $i = fgets(STDIN);
-        //get stop time
-        self::$stop = round(microtime(true) * 1000);
-        //printing elapsed time
-        echo self::elapsed();
+        } 
     }
 }
-
-$watch = StopWatch::watch();
+$startTime = 0;
+$endTime = 0;
+StopWatch::watch($startTime,$endTime);  
 ?>
